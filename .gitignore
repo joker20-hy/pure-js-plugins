@@ -1,0 +1,5 @@
+/.eslintrc.js
+/index.html
+/*.json
+/node_modules/
+/app.js

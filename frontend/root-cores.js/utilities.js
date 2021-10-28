@@ -21,13 +21,13 @@ class Util {
   static matchMedia (screen) {
     return window.matchMedia(screen).matches
   }
-  /**
-   * Log error to console
-   * @param {*} error
-   */
-  static error (error) {
-    return process.env.MIX_APP_ENV==='prod' ? true : console.log(error)
-  }
+  // /**
+  //  * Log error to console
+  //  * @param {*} error
+  //  */
+  // static error (error) {
+  //   return process.env.MIX_APP_ENV==='prod' ? true : console.log(error)
+  // }
   /**
    * Create new element
    * @param {String} tagName
