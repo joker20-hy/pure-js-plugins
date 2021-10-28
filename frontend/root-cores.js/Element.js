@@ -1,5 +1,5 @@
-import { CQuery } from './Query'
-import { CEvent } from './Event'
+import { CQuery } from './Query.js'
+import { CEvent } from './Event.js'
 
 /**
  * @param {Element|String} element
@@ -74,8 +74,7 @@ var __El = function (element, root = document) {
   }
   /**
    * Find first sibling match selector
-   * @param {String} selector 
-   * @returns 
+   * @param {String} selector
    */
   this.sibling = function (selector) {
     return CQuery.first(selector, self.parentElement)
@@ -115,6 +114,9 @@ class El extends __El {
   get css () {
     return this.raw.style
   }
+  /**
+   * return element 
+   */
   get parent () {
     return this.raw.parentElement
   }

@@ -1,7 +1,8 @@
-import { El } from "./root-cores.js/Element";
-import { CQuery } from "./root-cores.js/Query";
-import { CEvent } from "./root-cores.js/Event";
-import { Util } from "./root-cores.js/utilities";
+/* eslint-disable no-undef */
+import { El } from "./root-cores.js/Element.js";
+import { CQuery } from "./root-cores.js/Query.js";
+import { CEvent } from "./root-cores.js/Event.js";
+import { Util } from "./root-cores.js/utilities.js";
 
 const $ = function (element, root = document) {
   return new El(element, root);
@@ -43,12 +44,14 @@ $.scrollTop = (element, offset = null) => {
     if (!condition()) clearInterval(mark)
   }, 10)
 }
-$.cnf = $glb.const
-$.urls = $glb.urls
-/** */
-const searchParams = (new URL(window.location.href)).searchParams;
-if (searchParams.has(process.env.MIX_COOKIE_VOUCHER_REFERRAL)) {
-  localStorage.setItem(process.env.MIX_COOKIE_VOUCHER_REFERRAL, searchParams.get(process.env.MIX_COOKIE_VOUCHER_REFERRAL))
-}
+// // eslint-disable-next-line no-undef
+// $.cnf = $glb.const
+// // eslint-disable-next-line no-undef
+// $.urls = $glb.urls
+// /** */
+// const searchParams = (new URL(window.location.href)).searchParams;
+// if (searchParams.has(process.env.MIX_COOKIE_VOUCHER_REFERRAL)) {
+//   localStorage.setItem(process.env.MIX_COOKIE_VOUCHER_REFERRAL, searchParams.get(process.env.MIX_COOKIE_VOUCHER_REFERRAL))
+// }
 /** */
 export { $ }
